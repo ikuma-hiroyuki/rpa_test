@@ -6,7 +6,7 @@ import pyautogui
 button = './btn.png'
 
 
-def find_image(image_path, time_out, confidence):
+def find_image_coordinate(image_path, time_out, confidence):
     """
     プライマリスクリーンから任意の画像の座標を検索する
     :param image_path: 画面から見つけたい画像のパス。
@@ -25,7 +25,7 @@ def find_image(image_path, time_out, confidence):
 
 if __name__ == '__main__':
     try:
-        button_locate = find_image(image_path=button, time_out=10, confidence=0.9)
+        button_locate = find_image_coordinate(image_path=button, time_out=10, confidence=0.9)
         x, y = pyautogui.center(button_locate)
         pyautogui.moveTo(x, y)
     except TypeError:
