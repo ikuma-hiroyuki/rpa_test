@@ -6,7 +6,7 @@ import pyautogui
 button = './btn.png'
 
 
-def find_image_locate(image_path, time_out, confidence):
+def find_image_locate(image_path, time_out, confidence=1.0):
     """
     プライマリスクリーンから任意の画像の座標を検索する。
     :param image_path: 画面から見つけたい画像のパス。
